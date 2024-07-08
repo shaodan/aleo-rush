@@ -16,5 +16,5 @@ run:
 
 
 clean:
-	docker builder prune --all -f
-	# docker image prune --force-rm
+	# docker builder prune --all -f
+	docker image prune -f
