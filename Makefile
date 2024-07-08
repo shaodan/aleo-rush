@@ -4,7 +4,7 @@ APPLICATION_NAME ?= aleo-rush
 .PHONY: build push run clean
  
 build:
-	 docker build --tag ${DOCKER_USERNAME}/${APPLICATION_NAME} .
+	 docker build --tag ${DOCKER_USERNAME}/${APPLICATION_NAME} apool/
 
 
 push:
