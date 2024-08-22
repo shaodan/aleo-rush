@@ -1,10 +1,10 @@
 FROM ubuntu:22.04 as builder
 
-ENV APOOL_MINER_VERSION=1.6.7
-
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     && rm -rf /var/lib/apt/lists/*
+
+ENV APOOL_MINER_VERSION=1.8.1
 
 RUN wget --no-check-certificate https://github.com/apool-io/apoolminer/releases/download/v${APOOL_MINER_VERSION}/apoolminer_linux_v${APOOL_MINER_VERSION}.tar -O apoolminer.tar \
     && tar xvf apoolminer.tar
